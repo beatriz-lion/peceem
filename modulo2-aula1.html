@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2, Aula 1: Como a Internet Funciona - PECEEM</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .module-title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            color: var(--accent-color);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .infographic {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .network-diagram {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .interactive-lab {
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .protocol-steps {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .protocol-step {
+            background: #f8f9fa;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .activity-card {
+            background: #e8f4fc;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="module-title">Módulo 2: Internet e Segurança Digital</span>
+            <h1>Aula 1: Como a Internet Funciona</h1>
+            <p class="subtitle">Entendendo os protocolos e a infraestrutura por trás da rede mundial</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="content">
+            <section class="card">
+                <h2>Introdução à Internet</h2>
+                <p>A internet é uma rede global de computadores interconectados que se comunicam através de protocolos padronizados. Nesta aula, vamos explorar como os dados trafegam pela rede desde seu dispositivo até os servidores e vice-versa.</p>
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Infraestrutura de internet" class="network-diagram">
+            </section>
+            
+            <section class="card">
+                <h2>Infográfico: O Caminho dos Dados</h2>
+                <img src="https://www.cloudflare.com/img/learning/cdn/what-is-a-cdn/cdn-flow.png" alt="Infográfico do caminho dos dados na internet" class="infographic">
+                <p>Este infográfico mostra como sua requisição para um site percorre diversos pontos até chegar ao servidor de destino.</p>
+                <a href="#" class="btn">Baixar Infográfico em Alta Resolução</a>
+            </section>
+            
+            <section class="card">
+                <h2>Protocolos da Internet: TCP/IP</h2>
+                <p>O modelo TCP/IP é o conjunto de protocolos que torna a internet possível. Veja como funciona:</p>
+                
+                <ul class="protocol-steps">
+                    <li class="protocol-step">
+                        <span class="step-number">1</span>
+                        <strong>Protocolo HTTP/HTTPS:</strong> Define como navegadores e servidores web se comunicam
+                    </li>
+                    <li class="protocol-step">
+                        <span class="step-number">2</span>
+                        <strong>Protocolo TCP:</strong> Divide os dados em pacotes e garante sua entrega na ordem correta
+                    </li>
+                    <li class="protocol-step">
+                        <span class="step-number">3</span>
+                        <strong>Protocolo IP:</strong> Endereça e encaminha os pacotes pela rede
+                    </li>
+                    <li class="protocol-step">
+                        <span class="step-number">4</span>
+                        <strong>DNS:</strong> Converte nomes de domínio (como google.com) em endereços IP
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Laboratório Interativo: Rastreamento de Rotas</h2>
+                <p>Use o simulador abaixo para visualizar como seus dados viajam pela internet:</p>
+                
+                <div class="interactive-lab">
+                    <iframe src="https://www.cloudshark.org/captures/0c45d20e0f2d" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>Atividade Prática: Traceroute</h3>
+                    <p>Descubra o caminho que seus dados percorrem até chegar a sites populares:</p>
+                    <ol>
+                        <li>No Windows, abra o Prompt de Comando e digite: <code>tracert google.com</code></li>
+                        <li>No macOS/Linux, abra o Terminal e digite: <code>traceroute google.com</code></li>
+                        <li>Anote quantos "saltos" seus dados fazem até chegar ao destino</li>
+                        <li>Compare com outros sites como youtube.com ou wikipedia.org</li>
+                    </ol>
+                </div>
+                
+                <a href="#" class="btn">Baixar Guia Completo do Traceroute</a>
+            </section>
+            
+            <section class="card">
+                <h2>Vídeo: Cabos Submarinos da Internet</h2>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0G5Q9Z4mJJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <p>Este vídeo mostra a impressionante infraestrutura física que conecta continentes através de cabos submarinos.</p>
+            </section>
+            
+            <section class="card">
+                <h2>Material Complementar</h2>
+                <p>Leituras recomendadas para aprofundar seu conhecimento:</p>
+                <ul>
+                    <li>"Como funcionam os servidores DNS" - Explicação detalhada</li>
+                    <li>"Diferença entre HTTP e HTTPS" - Guia de segurança</li>
+                    <li>"O futuro da internet: IPv6 e além" - Inovações tecnológicas</li>
+                </ul>
+                <a href="#" class="btn">Baixar Materiais em PDF</a>
+            </section>
+            
+            <section class="card">
+                <h2>Próxima Aula</h2>
+                <p>Na próxima aula, exploraremos "Segurança e Privacidade Online", aprendendo sobre proteção de dados, senhas seguras e identificação de ameaças digitais.</p>
+                <a href="modulo2-aula2.html" class="btn">Pré-visualizar Aula 2</a>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>PECEEM - Projeto de Ensino de Computação Básica para Estudantes do Ensino Médio</p>
+            <p>© 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

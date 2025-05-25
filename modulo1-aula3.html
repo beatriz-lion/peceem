@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3: Sistemas Operacionais - PECEEM</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .os-comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .os-comparison th, .os-comparison td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .os-comparison th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .os-comparison tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .terminal-demo {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .command {
+            color: #2ecc71;
+        }
+        
+        .virtual-machine {
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .os-icons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .os-icon {
+            text-align: center;
+            width: 150px;
+            margin: 1rem;
+        }
+        
+        .os-icon img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .os-icons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Aula 3: Sistemas Operacionais</h1>
+            <p class="subtitle">Módulo 1: Fundamentos da Computação - PECEEM</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="content">
+            <section class="card">
+                <h2>Introdução aos Sistemas Operacionais</h2>
+                <p>O sistema operacional é o software mais importante do computador, gerenciando todos os recursos de hardware e fornecendo uma interface para os usuários e aplicativos.</p>
+                
+                <div class="os-icons">
+                    <div class="os-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows">
+                        <p>Windows</p>
+                    </div>
+                    <div class="os-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux">
+                        <p>Linux</p>
+                    </div>
+                    <div class="os-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="macOS">
+                        <p>macOS</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Comparação entre Sistemas Operacionais</h2>
+                
+                <table class="os-comparison">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Windows</th>
+                            <th>Linux</th>
+                            <th>macOS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Criador</td>
+                            <td>Microsoft</td>
+                            <td>Comunidade (Linus Torvalds)</td>
+                            <td>Apple</td>
+                        </tr>
+                        <tr>
+                            <td>Licença</td>
+                            <td>Proprietário</td>
+                            <td>Open Source</td>
+                            <td>Proprietário</td>
+                        </tr>
+                        <tr>
+                            <td>Interface</td>
+                            <td>Gráfica (GUI)</td>
+                            <td>Gráfica ou Terminal</td>
+                            <td>Gráfica (GUI)</td>
+                        </tr>
+                        <tr>
+                            <td>Segurança</td>
+                            <td>Média</td>
+                            <td>Alta</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>Custo</td>
+                            <td>Pago (algumas versões gratuitas)</td>
+                            <td>Gratuito</td>
+                            <td>Incluso com hardware Apple</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>Esta tabela mostra as principais diferenças entre os sistemas operacionais mais populares.</p>
+            </section>
+            
+            <section class="card">
+                <h2>Infográfico: "Sistemas Operacionais em Detalhe"</h2>
+                <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_NVBTV8jt4jD8ZIlavsMfA.png" alt="Infográfico sobre Sistemas Operacionais" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
+                <p>Visualize as principais características e diferenças entre os sistemas operacionais.</p>
+                <a href="#" class="btn">Baixar Infográfico em Alta Resolução</a>
+            </section>
+            
+            <section class="card">
+                <h2>Tutorial: Primeiros Passos no Terminal</h2>
+                <p>O terminal/linha de comando é uma ferramenta poderosa, especialmente no Linux e macOS. Veja alguns comandos básicos:</p>
+                
+                <div class="terminal-demo">
+                    <span class="command">ls</span> - Lista arquivos no diretório atual<br><br>
+                    <span class="command">cd pasta</span> - Entra em uma pasta<br><br>
+                    <span class="command">mkdir nova_pasta</span> - Cria uma nova pasta<br><br>
+                    <span class="command">rm arquivo</span> - Remove um arquivo<br><br>
+                    <span class="command">sudo</span> - Executa comandos como administrador
+                </div>
+                
+                <p>Experimente estes comandos em um terminal Linux ou no PowerShell do Windows.</p>
+            </section>
+            
+            <section class="card">
+                <h2>Atividade Prática: Explorando Sistemas Operacionais</h2>
+                <p>Nesta atividade, você irá:</p>
+                <ol>
+                    <li>Acessar máquinas virtuais com diferentes sistemas operacionais</li>
+                    <li>Identificar as diferenças nas interfaces</li>
+                    <li>Executar tarefas básicas em cada sistema</li>
+                    <li>Comparar a experiência entre Windows, Linux e macOS</li>
+                </ol>
+                
+                <div class="virtual-machine">
+                    <iframe src="https://www.onlinevm.io/" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                
+                <p>Use o simulador acima ou baixe o VirtualBox para criar suas próprias máquinas virtuais.</p>
+                <a href="https://www.virtualbox.org/" target="_blank" class="btn">Baixar VirtualBox</a>
+            </section>
+            
+            <section class="card">
+                <h2>Vídeo: Como os Sistemas Operacionais Gerenciam Recursos</h2>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/26QPDBe-NB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <p>Este vídeo explica como o sistema operacional gerencia CPU, memória e dispositivos de entrada/saída.</p>
+            </section>
+            
+            <section class="card">
+                <h2>Material Complementar</h2>
+                <p>Leitura recomendada: "Escolhendo o sistema operacional ideal" para diferentes necessidades:</p>
+                <ul>
+                    <li>Uso doméstico</li>
+                    <li>Desenvolvimento de software</li>
+                    <li>Servidores</li>
+                    <li>Segurança da informação</li>
+                </ul>
+                <a href="#" class="btn">Baixar Material Completo</a>
+            </section>
+            
+            <section class="card">
+                <h2>Próxima Aula</h2>
+                <p>No próximo módulo, exploraremos "Internet e Segurança Digital", aprendendo sobre como a internet funciona e como se proteger online.</p>
+                <a href="modulo2-aula1.html" class="btn">Pré-visualizar Módulo 2</a>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>PECEEM - Projeto de Ensino de Computação Básica para Estudantes do Ensino Médio</p>
+            <p>© 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4, Aula 1: Editores de Texto - PECEEM</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e67e22; /* Laranja para produtividade */
+            --light-color: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .module-title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            color: var(--accent-color);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tool-comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .tool-comparison th, .tool-comparison td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .tool-comparison th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .tool-comparison tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .editor-screenshot {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .formatting-example {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .formatted-text {
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .subtitle-text {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .highlight {
+            background-color: #fffde7;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #d35400;
+        }
+        
+        .activity-card {
+            background-color: #fef5e7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .shortcuts-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .shortcuts-list {
+                columns: 1;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="module-title">Módulo 4: Ferramentas Digitais</span>
+            <h1>Aula 1: Editores de Texto</h1>
+            <p class="subtitle">Dominando ferramentas essenciais para criação e formatação de documentos</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="content">
+            <section class="card">
+                <h2>Introdução aos Editores de Texto</h2>
+                <p>Editores de texto são ferramentas fundamentais para criação de documentos, desde trabalhos escolares até relatórios profissionais. Vamos explorar as principais opções e seus usos.</p>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4J9osslF6Z8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Comparativo de Ferramentas</h2>
+                
+                <table class="tool-comparison">
+                    <thead>
+                        <tr>
+                            <th>Ferramenta</th>
+                            <th>Pontos Fortes</th>
+                            <th>Melhor Para</th>
+                            <th>Disponibilidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Microsoft Word</td>
+                            <td>Recursos avançados, ampla compatibilidade</td>
+                            <td>Documentos formais, trabalhos acadêmicos</td>
+                            <td>Windows, Mac, Online (pago)</td>
+                        </tr>
+                        <tr>
+                            <td>Google Docs</td>
+                            <td>Colaboração em tempo real, armazenamento na nuvem</td>
+                            <td>Trabalhos em grupo, compartilhamento fácil</td>
+                            <td>Navegador (gratuito)</td>
+                        </tr>
+                        <tr>
+                            <td>LibreOffice Writer</td>
+                            <td>Código aberto, compatível com vários formatos</td>
+                            <td>Quem precisa de alternativa gratuita ao Word</td>
+                            <td>Windows, Mac, Linux (gratuito)</td>
+                        </tr>
+                        <tr>
+                            <td>Notion</td>
+                            <td>Organização flexível, banco de dados integrado</td>
+                            <td>Anotações, organização pessoal</td>
+                            <td>Multiplataforma (freemium)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <img src="https://assets.wordpress.envato-static.com/uploads/2020/03/google-docs-vs-microsoft-word-which-is-best.png" alt="Comparação entre interfaces" class="editor-screenshot">
+            </section>
+            
+            <section class="card">
+                <h2>Formatação Profissional</h2>
+                <p>Elementos essenciais para documentos bem formatados:</p>
+                
+                <div class="formatting-example">
+                    <h3>Exemplo de Documento Formatado</h3>
+                    <div class="formatted-text">
+                        <div class="title">A Importância da Educação Digital</div>
+                        <div class="subtitle-text">Por: [Seu Nome]</div>
+                        <p>A <span class="highlight">educação digital</span> tornou-se fundamental no século XXI, preparando estudantes para os desafios do futuro.</p>
+                        <p><strong>Principais benefícios:</strong></p>
+                        <ul>
+                            <li>Desenvolvimento do pensamento computacional</li>
+                            <li>Preparação para o mercado de trabalho</li>
+                            <li>Melhoria na capacidade de resolver problemas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p>Técnicas profissionais:</p>
+                <ul>
+                    <li>Estilos de título e subtítulo (não apenas aumentar fonte)</li>
+                    <li>Espaçamento consistente entre parágrafos</li>
+                    <li>Uso de listas para informações sequenciais</li>
+                    <li>Destaques sutis para termos importantes</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Atalhos de Teclado Essenciais</h2>
+                <p>Produtividade em editores de texto (funcionam na maioria dos programas):</p>
+                
+                <div class="shortcuts-list">
+                    <div>
+                        <h3>Formatação:</h3>
+                        <ul>
+                            <li><strong>Ctrl+B</strong> - Negrito</li>
+                            <li><strong>Ctrl+I</strong> - Itálico</li>
+                            <li><strong>Ctrl+U</strong> - Sublinhado</li>
+                            <li><strong>Ctrl+Shift+&gt;</strong> - Aumentar fonte</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Navegação:</h3>
+                        <ul>
+                            <li><strong>Ctrl+Home</strong> - Início do documento</li>
+                            <li><strong>Ctrl+End</strong> - Fim do documento</li>
+                            <li><strong>Ctrl+F</strong> - Localizar texto</li>
+                            <li><strong>Ctrl+H</strong> - Substituir texto</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Edição:</h3>
+                        <ul>
+                            <li><strong>Ctrl+Z</strong> - Desfazer</li>
+                            <li><strong>Ctrl+Y</strong> - Refazer</li>
+                            <li><strong>Ctrl+C/V/X</strong> - Copiar/Colar/Recortar</li>
+                            <li><strong>Ctrl+A</strong> - Selecionar tudo</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Google Docs:</h3>
+                        <ul>
+                            <li><strong>Ctrl+Alt+C</strong> - Inserir comentário</li>
+                            <li><strong>Ctrl+Alt+M</strong> - Chat de colaboração</li>
+                            <li><strong>Ctrl+Alt+Shift+S</strong> - Sugerir edições</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Atividade Prática</h2>
+                <p>Crie um documento profissional com:</p>
+                
+                <div class="activity-card">
+                    <h3>Trabalho sobre Impacto da Tecnologia</h3>
+                    <ol>
+                        <li>Crie um novo documento no editor de sua escolha</li>
+                        <li>Formate com:
+                            <ul>
+                                <li>Título principal</li>
+                                <li>Subtítulo com seu nome</li>
+                                <li>3 seções com títulos</li>
+                                <li>Listas enumeradas e com marcadores</li>
+                                <li>Destaques para termos importantes</li>
+                            </ul>
+                        </li>
+                        <li>Salve em dois formatos diferentes (DOCX e PDF)</li>
+                        <li>Compartilhe com um colega para revisão (se usando Google Docs)</li>
+                    </ol>
+                    
+                    <p><strong>Dica:</strong> Use estilos de formatação em vez de formatar manualmente cada elemento.</p>
+                    <a href="#" class="btn">Baixar Modelo de Documento</a>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Colaboração em Tempo Real</h2>
+                <p>O Google Docs revolucionou o trabalho em equipe:</p>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6a6ob3B_pHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <p>Recursos de colaboração:</p>
+                <ul>
+                    <li>Edição simultânea por múltiplos usuários</li>
+                    <li>Chat integrado e comentários</li>
+                    <li>Controle de versões e histórico de alterações</li>
+                    <li>Permissões granulares (visualizar, comentar, editar)</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Próxima Aula</h2>
+                <p>Na próxima aula, exploraremos "Planilhas Eletrônicas", aprendendo a organizar dados, fazer cálculos e criar gráficos profissionais.</p>
+                <a href="modulo4-aula2.html" class="btn">Pré-visualizar Aula 2</a>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>PECEEM - Projeto de Ensino de Computação Básica para Estudantes do Ensino Médio</p>
+            <p>© 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
