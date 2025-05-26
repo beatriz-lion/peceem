@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conteúdos detalhados do PECEEM - Projeto de ensino de computação básica para estudantes do ensino médio">
+    <meta name="keywords" content="computação, ensino médio, programação, tecnologia, educação">
+    <title>Conteúdos Detalhados - PECEEM</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            padding: 1rem 1.5rem;
+        }
+        
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        
+        .content-section {
+            padding: 3rem 0;
+        }
+        
+        .module {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .module h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .lesson {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .lesson h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .lesson p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .resources {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        
+        .resources h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .resources ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-back {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 2rem 0;
+            font-weight: 500;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Conteúdos Programáticos Detalhados - PECEEM</h1>
+            <p>Todos os módulos e aulas do projeto de computação básica</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="#modulo1">Fundamentos</a></li>
+            <li><a href="#modulo2">Internet</a></li>
+            <li><a href="#modulo3">Programação</a></li>
+            <li><a href="#modulo4">Tecnologia</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section class="content-section" id="modulo1">
+            <div class="module">
+                <h2>Módulo 1: Fundamentos da Computação</h2>
+                
+                <div class="lesson">
+                    <h3>Aula 1: História e Evolução dos Computadores</h3>
+                    <p>Desde os primeiros dispositivos mecânicos até os computadores modernos, explorando os marcos tecnológicos e suas implicações sociais.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Linha do tempo interativa da evolução tecnológica</li>
+                            <li>Documentário: "A História da Computação" (disponível no YouTube)</li>
+                            <li>Atividade prática: Pesquisa sobre personalidades como Ada Lovelace e Alan Turing</li>
+                            <li>Material complementar: Artigo "Como os computadores mudaram o mundo"</li>
+                        </ul>
+                        <a href="modulo1-aula1.html" class="btn">Acessar a aula 1</a>
+                    </div>
+                </div>
+                
+                <div class="lesson">
+                    <h3>Aula 2: Componentes de Hardware</h3>
+                    <p>Funcionamento dos principais componentes: CPU, memória RAM, armazenamento, placas mãe e periféricos.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Demonstração</li>
+                            <li>Montando um computador passo a passo</li>
+                            <li>Atividade prática: Atividade: Identificação de Componentes</li>
+                            <li>E depois, o que eu faço?</li>
+                        </ul>
+                        <a href="modulo1-aula2.html" class="btn">Acessar Aula 2</a>
+                    </div>
+                </div>
+
+                <!-- NOVA AULA ADICIONADA -->
+                <div class="lesson">
+                    <h3>Aula 3: Sistemas Operacionais</h3>
+                    <p>Conceitos básicos, funções principais e comparação entre os sistemas operacionais mais utilizados (Windows, Linux, macOS).</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Comparação entre os sistemas operacionais</li>
+                            <li>Tutorial: "Primeiros passos no terminal/linha de comando"</li>
+                            <li>Atividade prática: Explorar interfaces de diferentes SOs em máquinas virtuais</li>
+                            <li>Vídeo: "Como os sistemas operacionais gerenciam recursos"</li>
+                            <li>Material complementar: "Escolhendo o sistema operacional ideal"</li>
+                        </ul>
+                        <a href="modulo1-aula3.html" class="btn">Acessar Aula 3</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="modulo2">
+            <div class="module">
+                <h2>Módulo 2: Internet e Segurança Digital</h2>
+                
+                <div class="lesson">
+                    <h3>Aula 1: Como a Internet Funciona</h3>
+                    <p>Protocolos TCP/IP, DNS, servidores, roteadores e o caminho que os dados percorrem até chegar ao usuário final.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Ferramenta: Visualizador de rota de pacotes (traceroute)</li>
+                            <li>Atividade prática: Rastrear a rota de acesso a sites populares</li>
+                            <li>Material complementar: "Como funcionam os cabos submarinos"</li>
+                        </ul>
+                        <a href="modulo2-aula1.html" class="btn">Acessar a aula 1</a>
+                    </div>
+                </div>
+                
+                <div class="lesson">
+                    <h3>Aula 2: Segurança e Privacidade Online</h3>
+                    <p>Proteção de dados pessoais, criação de senhas seguras, identificação de golpes e configurações de privacidade.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Simulador de ataques phishing (identificação de e-mails falsos)</li>
+                            <li>Ferramenta: Verificador de força de senhas</li>
+                            <li>Atividade: Análise das configurações de privacidade em redes sociais</li>
+                            <li>Guia prático: "Protegendo suas contas online"</li>
+                        </ul>
+                       <a href="modulo2-aula2.html" class="btn">Acessar a aula 2</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="modulo3">
+            <div class="module">
+                <h2>Módulo 3: Introdução à Programação</h2>
+                
+                <div class="lesson">
+                    <h3>Aula 1: Lógica de Programação com Python</h3>
+                    <p>Conceitos básicos: variáveis, tipos de dados, operadores e estruturas sequenciais.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Ambiente de desenvolvimento online (Replit ou Google Colab)</li>
+                            <li>Caderno de exercícios com soluções comentadas</li>
+                            <li>Atividade prática: Criar um conversor de temperaturas</li>
+                            <li>Playlist recomendada: "Python para Iniciantes" (YouTube)</li>
+                        </ul>
+                        <a href="modulo3-aula1.html" class="btn">Acessar a aula 1</a>
+                    </div>
+                </div>
+                
+                <div class="lesson">
+                    <h3>Aula 2: Estruturas de Controle e Funções</h3>
+                    <p>Condicionais (if/else), loops (for/while) e criação de funções básicas.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Visualizador de fluxo de execução de código</li>
+                            <li>Desafios graduais de programação</li>
+                            <li>Atividade: Desenvolver um quiz interativo</li>
+                            <li>Material complementar: "Erros comuns de iniciantes"</li>
+                        </ul>
+                        <a href="modulo3-aula2.html" class="btn">Acessar a aula 2</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section" id="modulo4">
+            <div class="module">
+                <h2>Módulo 4: Tecnologia e Sociedade</h2>
+                
+                <div class="lesson">
+                    <h3>Aula 1: Aula 1: Editores de Texto</h3>
+                    <p>Dominando ferramentas essenciais para criação e formatação de documentos.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Introdução aos Editores de Texto</li>
+                            <li>Comparativo de Ferramentas</li>
+                            <li>Formatação Profissional e Atalhos de Teclado Essenciais</li>
+                            <li>Atividade: Trabalho sobre Impacto da Tecnologia</li>
+                        </ul>
+                        <a href="modulo4-aula1.html" class="btn">Acessar a aula 1</a>
+                    </div>
+                </div>
+                
+                <div class="lesson">
+                    <h3>Aula 2: Planilhas Eletrônicas</h3>
+                    <p>Organizando dados e realizando cálculos de forma eficiente.</p>
+                    <div class="resources">
+                        <h4>Recursos e Atividades:</h4>
+                        <ul>
+                            <li>Conceitos Fundamentais</li>
+                            <li>Laboratório de Planilhas</li>
+                            <li>Atividade: Controle de Notas</li>
+                            <li>Gráficos e Visualização de Dados"</li>
+                        </ul>
+                        <a href="modulo4-aula2.html" class="btn">Acessar a aula 2</a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="index.html" class="btn-back">Voltar para a Página Inicial</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 PECEEM - Projeto de ensino de computação básica para estudantes do ensino médio</p>
+            <p>Contato: projetopeceem@gmail.com | (94) 98141-8039</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling para navegação interna
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

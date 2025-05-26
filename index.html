@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PECEEM (Projeto de ensino de computação básica para estudantes do ensino médio)">
+    <meta name="keywords" content="computação, ensino médio, programação, tecnologia, educação">
+    <title>PECEEM</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            padding: 1rem 1.5rem;
+        }
+        
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .card {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                padding: 0.5rem 1rem;
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PECEEM - Projeto de ensino de computação básica para estudantes do ensino médio</h1>
+            <p>Desenvolvendo habilidades digitais para o futuro</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#conteudos">Conteúdos</a></li>
+            <li><a href="#metodologia">Metodologia</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section id="sobre">
+            <article class="card">
+                <h2 class="section-title">Sobre o Projeto</h2>
+                <p>O projeto PECEEM foi desenvolvido para preencher uma lacuna importante na formação dos jovens, oferecendo conhecimentos fundamentais em tecnologia que serão úteis tanto na vida acadêmica quanto profissional.</p>
+                
+                <p>Nosso objetivo é:</p>
+                <ul>
+                    <li>Democratizar o acesso ao conhecimento computacional</li>
+                    <li>Preparar os estudantes para os desafios da era digital</li>
+                    <li>Desenvolver habilidades de resolução de problemas</li>
+                    <li>Estimular a criatividade e o pensamento lógico</li>
+                </ul>
+                
+                <p>O projeto é voltado para estudantes de todas as séries do ensino médio, com abordagem adaptada para cada nível de conhecimento.</p>
+                
+                <a href="#conteudos" class="btn">Conheça nosso conteúdo</a>
+            </article>
+        </section>
+        
+        <section id="conteudos">
+            <h2 class="section-title">Conteúdos Programáticos</h2>
+            <div class="topics-grid">
+                <article class="card">
+                    <h3>Fundamentos da Computação</h3>
+                    <p>História e evolução dos computadores, componentes de hardware, sistemas operacionais e conceitos básicos de redes.</p>
+                </article>
+                
+                <article class="card">
+                    <h3>Internet e Segurança Digital</h3>
+                    <p>Funcionamento da internet, navegação segura, proteção de dados pessoais e identificação de notícias falsas.</p>
+                </article>
+                
+                <article class="card">
+                    <h3>Pensamento Computacional</h3>
+                    <p>Abstração, decomposição de problemas, reconhecimento de padrões e desenvolvimento de algoritmos.</p>
+                </article>
+                
+                <article class="card">
+                    <h3>Ferramentas Digitais</h3>
+                    <p>Pacote Office/Google Workspace, editores de texto, planilhas eletrônicas.</p>
+                </article>
+                
+                <article class="card">
+                    <h3>Introdução à Programação</h3>
+                    <p>Lógica de programação com Python ou JavaScript, estruturas básicas e desenvolvimento de pequenos projetos.</p>
+                </article>
+                
+     		<a href="conteudos.html" class="btn">Acessar Conteúdos Completos</a> </p>
+            </div>
+        </section>
+        
+        <section id="metodologia">
+            <article class="card">
+                <h2 class="section-title">Nossa Metodologia</h2>
+                <p>Utilizamos uma abordagem prática e interativa, com:</p>
+                
+                <div class="topics-grid">
+                    <div>
+                        <h3>Aulas Dinâmicas</h3>
+                        <p>Além do conteúdo programático, tem-se atividades para os alunos, tornando assim o conhecimento mais dinâmico, além de sites auxiliares como Youtube, FreeCodeCamp e Khan Academy.</p>
+                    </div>
+                    
+                    </div>
+            </article>
+        </section>
+        
+        <section id="beneficios">
+            <article class="card">
+                <h2 class="section-title">Benefícios para os Estudantes</h2>
+                
+                <div class="topics-grid">
+                    <div>
+                        <h3>Desenvolvimento Cognitivo</h3>
+                        <p>Melhora no raciocínio lógico, capacidade de resolver problemas e pensamento estruturado.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Preparação Profissional</h3>
+                        <p>Conhecimentos essenciais para qualquer carreira no mercado de trabalho atual.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Vantagem Acadêmica</h3>
+                        <p>Melhor desempenho em outras disciplinas que utilizam tecnologia como ferramenta.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Base Tecnológica</h3>
+                        <p>Fundamentos sólidos para quem deseja seguir na área de TI ou engenharias.</p>
+                    </div>
+                </div>
+                
+                <a href="#contato" class="btn">Leve este projeto para sua escola</a>
+            </article>
+        </section>
+        
+        <section id="contato">
+            <article class="card">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p>Interessado em implementar este projeto em sua escola ou tem dúvidas sobre nosso trabalho?</p>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="school">Escola/Instituição:</label>
+                        <input type="text" id="school" name="school">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Projeto Computação Básica para Ensino Médio</p>
+            <p>Desenvolvido com ❤️ para a educação tecnológica</p>
+            <p>Contato: projetopeceem@gmail.com | (94) 98141-8039</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simples validação do formulário
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if(name && email) {
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                this.reset();
+            } else {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+            }
+        });
+        
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
