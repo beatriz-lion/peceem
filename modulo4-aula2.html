@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4, Aula 2: Planilhas Eletrônicas - PECEEM</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #27ae60; /* Verde para dados e finanças */
+            --light-color: #ecf0f1;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .module-title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            color: var(--accent-color);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .spreadsheet-img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .formula-example {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 1rem 0;
+        }
+        
+        .function {
+            color: #3498db;
+        }
+        
+        .cell-ref {
+            color: #f1c40f;
+        }
+        
+        .operator {
+            color: #e74c3c;
+        }
+        
+        .interactive-sheet {
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #219955;
+        }
+        
+        .activity-card {
+            background-color: #eafaf1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .formula-card {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .formula-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="module-title">Módulo 4: Ferramentas Digitais</span>
+            <h1>Aula 2: Planilhas Eletrônicas</h1>
+            <p class="subtitle">Organizando dados e realizando cálculos de forma eficiente</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="content">
+            <section class="card">
+                <h2>Introdução às Planilhas Eletrônicas</h2>
+                <p>Planilhas são ferramentas poderosas para organização, análise e visualização de dados. Vamos explorar conceitos básicos e funções essenciais.</p>
+                
+                <img src="googlesheets.gif" alt="Interface do Google Sheets" class="spreadsheet-img">
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=ylKvera2tgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Conceitos Fundamentais</h2>
+                
+                <div class="formula-grid">
+                    <div class="formula-card">
+                        <h3><i class="fas fa-th"></i> Células</h3>
+                        <p>Unidade básica de uma planilha, identificada por letra (coluna) e número (linha). Ex: <strong>A1</strong>, <strong>B3</strong></p>
+                    </div>
+                    <div class="formula-card">
+                        <h3><i class="fas fa-superscript"></i> Fórmulas</h3>
+                        <p>Cálculos que começam com <strong>=</strong>. Ex: <strong>=A1+B1</strong></p>
+                    </div>
+                    <div class="formula-card">
+                        <h3><i class="fas fa-function"></i> Funções</h3>
+                        <p>Fórmulas pré-definidas. Ex: <strong>=SOMA(A1:A10)</strong></p>
+                    </div>
+                    <div class="formula-card">
+                        <h3><i class="fas fa-chart-bar"></i> Gráficos</h3>
+                        <p>Visualizações de dados criadas a partir de intervalos</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Funções Essenciais</h2>
+                
+                <div class="formula-example">
+                    <span class="function">=SOMA</span>(<span class="cell-ref">A1:A10</span>) <span class="comment"># Soma valores de A1 até A10</span><br><br>
+                    <span class="function">=MÉDIA</span>(<span class="cell-ref">B2:B20</span>) <span class="comment"># Calcula a média dos valores</span><br><br>
+                    <span class="function">=SE</span>(<span class="cell-ref">C1</span><span class="operator">&gt;</span><span class="cell-ref">50</span>; <span class="string">"Aprovado"</span>; <span class="string">"Reprovado"</span>) <span class="comment"># Teste condicional</span><br><br>
+                    <span class="function">=PROCV</span>(<span class="cell-ref">D1</span>; <span class="cell-ref">E1:F100</span>; <span class="cell-ref">2</span>; <span class="cell-ref">FALSO</span>) <span class="comment"># Busca vertical</span>
+                </div>
+                
+                <p>Principais categorias de funções:</p>
+                <ul>
+                    <li><strong>Matemáticas:</strong> SOMA, MÉDIA, MÁXIMO, MÍNIMO</li>
+                    <li><strong>Lógicas:</strong> SE, E, OU</li>
+                    <li><strong>Texto:</strong> CONCATENAR, DIREITA, ESQUERDA</li>
+                    <li><strong>Data:</strong> HOJE, AGORA, DIA, MÊS</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Laboratório de Planilhas</h2>
+                <p>Experimente criar e editar planilhas diretamente no seu navegador:</p>
+                
+                <div class="interactive-sheet">
+                    <iframe src="https://docs.google.com/spreadsheets/d/1ZyGWWvboe2KuHiw1IU6iIIHTnEoeRQvb7q8SdiEa1pc/edit?gid=0#gid=0" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>Atividade: Controle de Notas</h3>
+                    <p>Crie uma planilha para calcular médias escolares:</p>
+                    <ol>
+                        <li>Na coluna A, insira nomes de 5 alunos</li>
+                        <li>Nas colunas B, C e D, insira notas de 3 provas (0-10)</li>
+                        <li>Na coluna E, calcule a média de cada aluno</li>
+                        <li>Na coluna F, use SE para mostrar "Aprovado" (média ≥6) ou "Reprovado"</li>
+                        <li>Crie um gráfico de barras com as médias</li>
+                    </ol>
+                    <a href="https://canaltech.com.br/apps/como-calcular-media-mediana-e-moda-no-excel/" class="btn">Acessar Modelo da Planilha</a>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Formatos Condicionais</h2>                
+                <p>Aplicações úteis:</p>
+                <ul>
+                    <li>Destacar notas abaixo da média em vermelho</li>
+                    <li>Colorir gastos acima do orçamento</li>
+                    <li>Mostrar barras de progresso dentro das células</li>
+                    <li>Encontrar valores duplicados</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Gráficos e Visualização de Dados</h2>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=S6kyEA-hXZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <p>Tipos de gráficos e quando usar:</p>
+                <ul>
+                    <li><strong>Barras:</strong> Comparar valores entre categorias</li>
+                    <li><strong>Pizza:</strong> Mostrar proporções de um todo</li>
+                    <li><strong>Linhas:</strong> Visualizar tendências ao longo do tempo</li>
+                    <li><strong>Dispersão:</strong> Relacionar duas variáveis numéricas</li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Próxima Aula</h2>
+                <p>Na próxima aula, exploraremos "Apresentações Multimídia", aprendendo a criar slides impactantes para projetos e trabalhos escolares.</p>
+                <a href="modulo4-aula3.html" class="btn">Pré-visualizar Aula 3</a>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>PECEEM - Projeto de Ensino de Computação Básica para Estudantes do Ensino Médio</p>
+            <p>© 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
